@@ -39,7 +39,7 @@ namespace TicTacToeProj
             else
                 pictureBox.Image = imageO;
 
-            turn *= -1; //Swaps bc 1 * -1 = -1 and -1 * -1 = 1
+            turn *= -1; //Swaps between X or O bc 1 * -1 = -1 and -1 * -1 = 1
 
             //X Wins
             if (board[x][0] == 1 && board[x][1] == 1 && board[x][2] == 1) //Verticals
@@ -88,7 +88,7 @@ namespace TicTacToeProj
             if(total == 9 && isGame)
             {
                 isGame = false;
-                Score.Text = "TIED!";
+                Score.Text = "TIE!";
                 Score.Visible = !Score.Visible;
             }
 
@@ -164,6 +164,7 @@ namespace TicTacToeProj
             pictureBox8.Image = null;
             pictureBox9.Image = null;
             isGame = true;
+            turn = 1;
         }
     }
 }
